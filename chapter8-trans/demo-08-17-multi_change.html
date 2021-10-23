@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multi change</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        .layer1, .layer2, .layer3 {
+            width: 6em;
+            height: 6em;
+            background-color: orange;
+        }
+
+        .layer1 {
+            transform: translate(3em, 3em);
+            filter: hue-rotate(30deg);
+        }
+
+        .layer2 {
+            transform: scale(1.5, 1.5);
+            filter: hue-rotate(60deg);
+        }
+
+        .layer3 {
+            transform: rotate(45deg);
+            filter: hue-rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+<div class="layer1">
+    <div class="layer2">
+        <div class="layer3"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <script src="../common/note.js"></script>
+    <style>
+        .container .ball {
+            animation: shift 6s cubic-bezier(0.75, -0.5, 0.25,1.5) infinite alternate;
+        }
+
+        @keyframes shift {
+            33% {transform: translateX(2em)}
+            66% {transform: translateX(4em)}
+            100% {transform: translateX(6em)}
+        }
+    </style>
+</head>
+<body>
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+</body>
+</html>

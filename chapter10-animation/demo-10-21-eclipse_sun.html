@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            /*居中*/
+            margin: 0;
+        }
+
+        .sky{
+            width: 100vw;
+            height: 100vh;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sun,
+        .moon{
+            position: absolute;
+            width: 50vmin;
+            height: 50vmin;
+            border-radius: 50%;
+        }
+
+        .sun{
+            background-color: gold;
+        }
+        .moon{
+            background-color: slategray;
+        }
+
+        @keyframes animation-moon {
+            from{
+                transform: translateX(-100vmin);
+            }
+
+            to{
+                transform: translateX(100vmin);
+            }
+        }
+
+        @keyframes animation-sun {
+            50%{
+                box-shadow: 0 0 5em 1em white;
+            }
+        }
+
+        @keyframes to-black {
+            50%{
+                background-color: black;
+            }
+        }
+
+        .sky,
+        .sun,
+        .moon{
+            animation: 10s linear infinite;
+        }
+
+        .sky{
+            animation-name: to-black;
+        }
+        .sun{
+            ani
+        }
+    </style>
+</head>
+<body>
+<div class="sky">
+    <div class="sun"></div>
+    <div class="moon"></div>
+</div>
+</body>
+</html>

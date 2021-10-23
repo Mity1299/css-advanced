@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+        .container .ball{
+            animation: shift 1s linear infinite forwards;
+        }
+
+        .container:nth-child(1) .ball{animation-direction: normal}
+        .container:nth-child(2) .ball{animation-direction: alternate}
+        .container:nth-child(3) .ball{animation-direction: reverse}
+        .container:nth-child(4) .ball{animation-direction: alternate-reverse}
+
+        @keyframes shift {
+            to{
+                transform: translateX(6em) scale(0.5);
+                background-color: lightcoral;
+            }
+        }
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+</body>
+</html>

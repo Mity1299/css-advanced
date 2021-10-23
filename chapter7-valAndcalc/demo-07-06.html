@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 10px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+        div{
+            width: 10em;
+            height: 10em;
+            border: 0.25em solid white;
+            border-radius: 1em;
+            margin: 2em;
+        }
+
+        div:nth-child(1){
+            background-color: hsl(calc(30deg + 90deg * 1), 100%, 60%);
+            transform: rotate(calc(50deg*1));
+        }
+        div:nth-child(2){
+            background-color: hsl(calc(30deg + 90deg * 2), 100%, 60%);
+            transform: rotate(calc(50deg*2));
+        }
+        div:nth-child(3){
+            background-color: hsl(calc(30deg + 90deg * 3), 100%, 60%);
+            transform: rotate(calc(50deg*3));
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

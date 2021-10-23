@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <script src="../common/note.js"></script>
+    <script>new Note('10-8').render()</script>
+    <!--        应用场景：
+    一个元素要动画入场，那么动画的第1帧应该令元素在场景内不可见。
+    如果不用backwards，就要把元素的样式设置为不可见，而不可见的元素不便于调试，
+    所以更好的办法应该是让元素保持可见，并同时设置backwards关键字。
+    当屏蔽掉动画代码时，能很方便地调试静态样式；当启用动画代码时，元素就转到不可见状态。
+-->
+
+    <style>
+        .container:nth-child(1) .ball {
+            transform: scale(0);
+            filter: opacity(0);
+            /* animation: show 1s infinite; */
+        }
+
+        .container:nth-child(2) .ball {
+            /* animation: show 1s infinite; */
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes show {
+            from {
+                transform: scale(0);
+                filter: opacity(0);
+            }
+
+            to {
+                transform: scale(1);
+                filter: opacity(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+
+    <figure class="container">
+        <div class="ball"></div>
+    </figure>
+</body>
+</html>

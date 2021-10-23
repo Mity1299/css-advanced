@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multi filter</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            width: 100vw;
+        }
+        div{
+            background-color: hsl(0,100%,70%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        div:nth-child(1){filter: blur(0px) hue-rotate(0deg)}
+        div:nth-child(2){filter: blur(2px) hue-rotate(20deg)}
+        div:nth-child(3){filter: blur(4px) hue-rotate(40deg)}
+        div:nth-child(4){filter: blur(6px) hue-rotate(60deg)}
+
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

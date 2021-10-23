@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple shadow</title>
+    <style>
+        body{
+            display: grid;
+            width: 1300px;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 30px;
+        }
+        div{
+            /*width: 10em;*/
+            height: 10em;
+            font-size: 1em;
+            border:1px solid black;
+            background: white;
+            margin: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div>div{
+            width: 60%;
+            height: 60%;
+            background-color: white !important;
+        }
+        div:nth-child(1)>div{
+            box-shadow: 1em 1em gray;
+        }
+        div:nth-child(2)>div{
+            box-shadow: 1em 1em 0.05em gray;
+        }
+        div:nth-child(3)>div{
+            box-shadow: 0 0 1em gray;
+        }
+        div:nth-child(4)>div{
+            box-shadow: 0 0 0 1em hsla(0,0%,0%,0.3);
+        }
+        div:nth-child(5)>div{
+            box-shadow: 0 0 0 1em hsla(0,0%,100%,0.3);
+        }
+        div:nth-child(6)>div{
+            box-shadow: 0 0 1em 0.3em hsla(0,0%,0%,0.3);
+        }
+        div:nth-child(1),
+        div:nth-child(2),
+        div:nth-child(3){
+            background-color: lightyellow;
+        }
+
+        div:nth-child(4),
+        div:nth-child(5),
+        div:nth-child(6){
+            background-image: linear-gradient(
+                    45deg,
+                    lightcoral 50%,
+                    lightgreen 50%
+            );
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div></div>
+</div>
+<div>
+    <div></div>
+</div>
+<div>
+    <div></div>
+</div>
+<div>
+    <div></div>
+</div>
+<div>
+    <div></div>
+</div>
+<div>
+    <div></div>
+</div>
+</body>
+</html>

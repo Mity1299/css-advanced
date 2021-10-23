@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>radial circle</title>
+    <style>
+        div {
+            width: 30em;
+            height: 20em;
+            font-size: 10px;
+            margin: 2em;
+        }
+
+        div:nth-child(1) {
+            background-image: radial-gradient(
+                    orangered 15%,
+                    orange 15%, orange 30%,
+                    gold 30%, gold 45%,
+                    lightgreen 45%, lightgreen 60%,
+                    cyan 60%
+            );
+        }
+
+        div:nth-child(2) {
+            background-image: radial-gradient(
+                    circle,
+                    orangered 15%,
+                    orange 15%, orange 30%,
+                    gold 30%, gold 45%,
+                    lightgreen 45%, lightgreen 60%,
+                    cyan 60%
+            );
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+
+        .container .ball {
+            transition: transform 1s;
+            transition-delay: 0.5s;
+        }
+
+        .container:hover .ball {
+            /*transform: translateX(6em);*/
+            /*background-color: lightcoral;*/
+
+            animation: shift 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes shift {
+            to {
+                transform: translateX(6em);
+            }
+
+            0%, 100% {
+                background-color: lightcoral;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+
+</body>
+</html>

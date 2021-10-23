@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>equalizer</title>
+    <style>
+        .equalizer{
+            width: 10em;
+            height: 10em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .equalizer div{
+            width: 1.5em;
+            background: linear-gradient(red, yellow, green);
+        }
+
+        .equalizer div:nth-child(1){clip-path: inset(55% 0 0 0)}
+        .equalizer div:nth-child(2){clip-path: inset(20% 0 0 0)}
+        .equalizer div:nth-child(3){clip-path: inset(38% 0 0 0)}
+        .equalizer div:nth-child(4){clip-path: inset(80% 0 0 0)}
+        .equalizer div:nth-child(5){clip-path: inset(13% 0 0 0)}
+
+    </style>
+</head>
+<body>
+<figure class="equalizer">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</figure>
+</body>
+</html>

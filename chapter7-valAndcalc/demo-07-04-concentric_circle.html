@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>concentric circle</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .concentric-circle{
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+            background-color: transparent;
+            filter: opacity(0.8);
+            box-shadow:
+                    0 0 0 calc(2em * 1) gold,
+                    0 0 0 calc(2em * 2) orange,
+                    0 0 0 calc(2em * 3) orangered
+        }
+    </style>
+</head>
+<body>
+<figure class="concentric-circle">
+
+</figure>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::before ::after zindex</title>
+    <style>
+        div{
+            margin: 1em;
+        }
+        div,
+        div::before,
+        div::after{
+            width: 10em;
+            height: 10em;
+            border-radius: 50%;
+        }
+
+        div{
+            font-size: 10px;
+            margin: 4em;
+            position: relative;
+            background-color: lightgreen;
+        }
+
+        div::before,
+        div::after{
+            content: '';
+            position: absolute;
+            top: 5em;
+        }
+
+        div::before{background-color: moccasin;}
+        div::after{background-color: orange;}
+
+        div::before{right: 3em;}
+        div::after{left: 3em;}
+
+        div:nth-child(1){z-index: auto}
+        div:nth-child(1)::before{z-index: -1}
+        div:nth-child(1)::after{z-index: -2}
+
+        div:nth-child(2){z-index: 1}
+        div:nth-child(2)::before{z-index: -1}
+        div:nth-child(2)::after{z-index: -2}
+
+        div:nth-child(3){z-index: auto}
+        div:nth-child(3)::before{z-index: auto}
+        div:nth-child(3)::after{z-index: auto}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

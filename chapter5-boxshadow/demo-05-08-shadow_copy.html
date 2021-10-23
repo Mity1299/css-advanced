@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shadow copy</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 100px;
+            margin-top: 2em;
+        }
+
+        div {
+            width: 1em;
+            height: 1em;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px dashed black;
+        }
+
+        div:nth-child(1) {
+            color: orange;
+            box-shadow: 1.1em 0,
+            0 1.1em,
+            1.1em 1.1em,
+            2.2em 1.1em,
+            1.1em 2.2em;
+        }
+        div:nth-child(2) {
+            color: orange;
+            box-shadow:
+            0em -1.1em 0 -0.1em tomato,
+            -1.1em 0em 0 0.2em gold,
+            1.1em 0em 0 0.2em gold,
+            0em 1.1em 0 0.1em;
+
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+</body>
+</html>

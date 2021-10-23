@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nth</title>
+    <style>
+        figure{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        figure div{
+            width: 3vw;
+            height: 3vw;
+            background-color: lightgreen;
+            border-radius: 50%;
+            margin: 0.2vw;
+        }
+
+        /*div:nth-child(0n+7){*/
+        /*    background-color: orangered;*/
+        /*}*/
+        /*div:nth-child(1n+3){*/
+        /*    background-color: orangered;*/
+        /*}*/
+        /*div:nth-child(2n+1){*/
+        /*    background-color: orangered;*/
+        /*}*/
+        /*div:nth-child(2n+0){*/
+        /*    background-color: orangered;*/
+        /*}*/
+        div:nth-child(5n){
+            background-color: orangered;
+        }
+        /*div:nth-child(6n+3){*/
+        /*    background-color: orangered;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <figure>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+</body>
+</html>

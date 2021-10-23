@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cube</title>
+    <style>
+        .cube{
+            font-size: 10px;
+            width: 12em;
+            height: 12em;
+            color: deepskyblue;
+            background-color: currentColor;
+            position: relative;
+        }
+
+        .cube::before{
+            content: '';
+            position: absolute;
+            width: inherit;
+            height: 3em;
+            top: -3em;
+            left: 0;
+            background-color: currentColor;
+            filter: brightness(0.9);
+
+            transform-origin: bottom;
+            transform: skewX(-45deg);
+        }
+
+        .cube::after{
+            content: '';
+            position: absolute;
+            width: 3em;
+            height: inherit;
+            top:0;
+            right: -3em;
+            background-color: currentColor;
+            filter: brightness(0.6);
+
+            transform-origin: left;
+            transform: skewY(-45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="cube"></div>
+</body>
+</html>

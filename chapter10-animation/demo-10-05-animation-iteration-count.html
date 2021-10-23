@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+        .container .ball{
+            animation: shift 1s linear forwards;
+        }
+
+        .container:nth-child(1) .ball{
+            animation-iteration-count: 3;
+        }
+        .container:nth-child(2) .ball{
+            animation-iteration-count: 2.5;
+        }
+
+        @keyframes shift {
+            to{
+                transform: translateX(6em);
+            }
+        }
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+</body>
+</html>

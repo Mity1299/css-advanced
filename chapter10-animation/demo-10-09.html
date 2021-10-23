@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+        .container .ball{
+            animation: shift 1s linear infinite alternate;
+        }
+
+        .container:hover .ball{
+            animation-play-state: paused;
+        }
+
+        @keyframes shift {
+            to{
+                transform: translateX(6em);
+            }
+        }
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+</body>
+</html>

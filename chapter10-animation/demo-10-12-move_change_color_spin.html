@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+        .container{
+            border-color: silver dodgerblue silver hotpink;
+            animation: spin 2s linear infinite;
+        }
+
+        .container .ball{
+            animation:
+                    shift 1s linear infinite alternate,
+                    change-color 2s linear infinite;
+
+        }
+
+        @keyframes shift {
+            to{
+                transform: translateX(6em);
+            }
+        }
+
+        @keyframes change-color {
+            55%{
+                background-color: dodgerblue;
+            }
+
+            5%, 50%{
+                background-color: hotpink;
+            }
+        }
+
+        @keyframes spin {
+            to{
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lotus optimize</title>
+    <style>
+        .lotus{
+            font-size: 10px;
+            width: 40em;
+            height: 20em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lotus div{
+            width: 12em;
+            height: 5em;
+            border-radius: 50%;
+            background-color: lightcoral;
+            position: absolute;
+            transform-origin: right;
+            top: calc(20em - 5em);
+            left: calc((40em / 2) - 12em);
+            box-sizing: border-box;
+
+            --rotate-deg:calc(20deg * (var(--n) - 1));
+            --hue-deg:calc(30deg * (var(--n) - 1));
+            transform: rotate(var(--rotate-deg));
+            filter:hue-rotate(var(--hue-deg));
+        }
+        .lotus div:nth-child(1){--n:1;}
+        .lotus div:nth-child(2){--n:2;}
+        .lotus div:nth-child(3){--n:3;}
+        .lotus div:nth-child(4){--n:4;}
+        .lotus div:nth-child(5){--n:5;}
+        .lotus div:nth-child(6){--n:6;}
+        .lotus div:nth-child(7){--n:7;}
+        .lotus div:nth-child(8){--n:8;}
+        .lotus div:nth-child(9){--n:9;}
+        .lotus div:nth-child(10){--n:10;}
+    </style>
+</head>
+<body>
+<figure class="lotus">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</figure>
+</body>
+</html>

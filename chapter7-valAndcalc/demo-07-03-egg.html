@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>egg</title>
+    <style>
+        :root{
+            /*父级作用域*/
+            --egg-color:white;
+            --yolk-color:orange;
+        }
+
+        .egg{
+            /*子集作用域*/
+            --egg-color: lightyellow;
+        }
+
+        .egg{
+            width: 10em;
+            height: 10em;
+            background-color: var(--egg-color);
+            border-radius: 50%/30% 60%;
+            margin: 3em 0 0 5em;
+        }
+
+        .egg .yolk{
+            position: relative;
+            width: 45%;
+            height: 45%;
+            top: 25%;
+            left: 25%;
+            border-radius: 50%;
+            background-color: var(--yolk-color);
+        }
+    </style>
+</head>
+<body>
+<div class="egg">
+    <div class="yolk"></div>
+</div>
+</body>
+</html>

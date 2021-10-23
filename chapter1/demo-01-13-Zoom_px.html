@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoom</title>
+    <style>
+        .magnifier{
+            position: relative;
+            color: dodgerblue;
+        }
+        .lens{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 10px solid;
+            border-radius: 50%;
+        }
+        .handle{
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            border-radius: 0 0 10px 10px;
+            background-color: currentColor;
+            left: 100px;
+            top: 100px;
+            transform: rotate(-45deg);
+            transform-origin: top;
+        }
+
+    </style>
+</head>
+<body>
+    <figure class="magnifier">
+        <div class="lens"></div>
+        <div class="handle"></div>
+    </figure>
+</body>
+</html>

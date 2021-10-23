@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>balls</title>
+    <link rel="stylesheet" href="demo-10-common.css">
+    <style>
+        .container .ball{
+            animation: shift 1s linear infinite alternate;
+        }
+
+        .container:nth-child(1) .ball{animation-delay: 0s;}
+        .container:nth-child(2) .ball{animation-delay: -0.1s;}
+        .container:nth-child(3) .ball{animation-delay: -0.2s;}
+        .container:nth-child(4) .ball{animation-delay: -0.3s;}
+        .container:nth-child(5) .ball{animation-delay: -0.4s;}
+
+        @keyframes shift {
+            to{
+                transform: translateX(6em);
+            }
+        }
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+<figure class="container">
+    <div class="ball"></div>
+</figure>
+
+</body>
+</html>

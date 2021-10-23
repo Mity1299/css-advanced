@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hue-rotate</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            flex-wrap: wrap;
+        }
+
+        .container div{
+            background-image: linear-gradient(lightcoral 50%, lightgreen 50%);
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .container div:nth-child(1){filter: hue-rotate(0deg)}
+        .container div:nth-child(2){filter: hue-rotate(20deg)}
+        .container div:nth-child(3){filter: hue-rotate(40deg)}
+        .container div:nth-child(4){filter: hue-rotate(60deg)}
+        .container div:nth-child(5){filter: hue-rotate(80deg)}
+        .container div:nth-child(6){filter: hue-rotate(-80deg)}
+    </style>
+</head>
+<body>
+<figure class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</figure>
+</body>
+</html>

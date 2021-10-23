@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>counter</title>
+    <style>
+
+        .out-container{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container div{
+            width: 3em;
+            height: 3em;
+            background-color: royalblue;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .container div::before{
+            /*content: 'x';*/
+            position: absolute;
+            font-size: 1.5em;
+            font-family: sans-serif;
+            width: inherit;
+            line-height: 2em;
+            text-align: center;
+            color: white;
+        }
+
+        .out-container .container:nth-child(1){counter-reset: n;}
+        .out-container .container:nth-child(1) div{counter-increment: n; background: green}
+        .out-container .container:nth-child(1) div::before {content: counter(n);}
+
+        .out-container .container:nth-child(2){counter-reset: n 10;}
+        .out-container .container:nth-child(2) div{counter-increment: n; background: orange}
+        .out-container .container:nth-child(2) div::before {content: counter(n);}
+
+        .out-container .container:nth-child(3){counter-reset: n;}
+        .out-container .container:nth-child(3) div{counter-increment: n 3;background: hotpink}
+        .out-container .container:nth-child(3) div::before {content: counter(n);}
+
+        .out-container .container:nth-child(4){counter-reset: n 11;}
+        .out-container .container:nth-child(4) div{counter-increment: n -1;}
+        .out-container .container:nth-child(4) div::before {content: counter(n);}
+
+
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <figure class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+    <figure class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+    <figure class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+    <figure class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </figure>
+</div>
+</body>
+</html>
